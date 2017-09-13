@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:data="clr-namespace:MVVMDemo.Models"
+             xmlns:model="clr-namespace:MVVMDemo.Models"
              mc:Ignorable="d"
              d:DesignHeight="300"
              d:DesignWidth="300"
@@ -14,7 +14,8 @@
 
 
     <UserControl.Resources>
-        <DataTemplate DataType="data:Teacher" x:Key="teacherDataTemplate">
+        <DataTemplate x:Key="TeacherDataTemplate"
+                      DataType="model:Teacher">
             <StackPanel Orientation="Horizontal">
                 <TextBox Text="{Binding FirstName}"
                          Width="100"
@@ -30,7 +31,7 @@
         <StackPanel>
             <ListView ItemsSource="{Binding Teachers}" 
                       SelectedItem="{Binding SelectedTeacher}"
-                      ItemTemplate="{StaticResource teacherDataTemplate}">
+                      ItemTemplate="{StaticResource TeacherDataTemplate}">
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel Orientation="Vertical"/>

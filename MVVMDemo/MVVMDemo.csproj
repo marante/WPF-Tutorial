@@ -70,7 +70,7 @@
     </ApplicationDefinition>
     <Compile Include="AppBootstrapper.cs" />
     <Compile Include="Core\FlexCommand.cs" />
-    <Compile Include="Models\TeacherModel.cs" />
+    <Compile Include="Models\Teacher.cs" />
     <Compile Include="ViewModels\RootViewModel.cs" />
     <Compile Include="ViewModels\StudentViewModel.cs" />
     <Compile Include="ViewModels\TeacherViewModel.cs" />
@@ -102,7 +102,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\StudentModel.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

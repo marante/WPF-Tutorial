@@ -1,7 +1,7 @@
-﻿using MVVMDemo.Models;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
 using MVVMDemo.Core;
+using MVVMDemo.Models;
 
 namespace MVVMDemo.ViewModels
 {

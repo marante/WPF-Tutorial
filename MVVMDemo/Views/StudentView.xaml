@@ -4,8 +4,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:cal="http://www.caliburnproject.org"
-             xmlns:data="clr-namespace:MVVMDemo.Models"
              xmlns:viewModels="clr-namespace:MVVMDemo.ViewModels"
+             xmlns:model="clr-namespace:MVVMDemo.Models"
              mc:Ignorable="d"
              d:DesignHeight="300"
              d:DesignWidth="300"
@@ -14,7 +14,8 @@
              cal:Bind.AtDesignTime="True">
 
     <UserControl.Resources>
-        <DataTemplate DataType="data:Student" x:Key="studentDataTemplate">
+        <DataTemplate x:Key="StudentDataTemplate"
+                      DataType="model:Student">
             <StackPanel Orientation="Horizontal">
                 <TextBox Text="{Binding FirstName}"
                          Width="100"
@@ -30,7 +31,7 @@
         <StackPanel>
             <ListView ItemsSource="{Binding Students}"
                       SelectedItem="{Binding SelectedStudent}" 
-                      ItemTemplate="{StaticResource studentDataTemplate}"/>
+                      ItemTemplate="{StaticResource StudentDataTemplate}"/>
             <Button Content="Delete"
                     Command="{Binding DeleteStudent}"
                     HorizontalAlignment="Left"
